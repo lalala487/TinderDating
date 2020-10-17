@@ -3,12 +3,14 @@
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBZII7m5vzJvbIA_g0PH5PwRvi5DaDHBwY",
-    authDomain: "binder-5c15a.firebaseapp.com",
-    databaseURL: "https://binder-5c15a.firebaseio.com",
-    projectId: "binder-5c15a",
-    storageBucket: "binder-5c15a.appspot.com",
-    messagingSenderId: "608889844435"
+	apiKey: "AIzaSyAWQAlvjPMZZ9MhGlnuU1JgA1dJTQzW9Z8",
+    authDomain: "tinder-a4807.firebaseapp.com",
+    databaseURL: "https://tinder-a4807.firebaseio.com",
+    projectId: "tinder-a4807",
+    storageBucket: "tinder-a4807.appspot.com",
+    messagingSenderId: "644795758401",
+    appId: "1:644795758401:web:7c9005df4164f9db7d53c0",
+    measurementId: "G-PC2M7625YQ"
   };
   firebase.initializeApp(config);
 </script>
