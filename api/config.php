@@ -13,10 +13,10 @@
     
 	
 	//firebase database link
-    $firebaseDb_URL_MainDb = "your_key";
+    $firebaseDb_URL_MainDb = "https://tinder-a4807.firebaseio.com";
 	$firebaseDb_URL=$firebaseDb_URL_MainDb."/Match";
 
-	$firbase_key = "your_key";
+	$firbase_key = "AAAAliDSd0E:APA91bENS48TMZfAp-xIGUSNm9g5Tr5WllaF3LFO77BWUAf6zv-gdCEc0kSnCmmH_sGZQOilFxJ0MH7Ko_RW3FyR0cCcvtfYpIiprx9xGoISinpK8EE19nIBHjMAXl7F0nQ0IrKI5xM5";
 	//https://i.gyazo.com/f1e5ba9f40c39abfdec1a01325c59cbd.png 
 	//you can get server key from here for enable push notificaton 
 	define("firebase_key",$firbase_key);
@@ -28,10 +28,10 @@
 	
 	
 	//database configration
-	$servername = "your_key";
-	$database = "your_key";
-	$username = "your_key";
-	$password = "your_key";
+	$servername = "localhost";
+	$database = "Tinder";
+	$username = "root";
+	$password = "1Topnotch@";
     
 	// Create connection
 
