@@ -655,7 +655,7 @@ public class Users_F extends RootFragment implements View.OnClickListener {
                 break;
 
             case R.id.finding_refresh_btn:
-                if(!MainMenuActivity.purduct_purchase){
+                if(MainMenuActivity.purduct_purchase){
                     card_viewstack.reverse();
                 }
                 else

@@ -60,7 +60,6 @@ public class MainMenuActivity extends AppCompatActivity implements BillingProces
 
     public static boolean purduct_purchase=false;
 
-
     public static String action_type="none";
     public static String receiverid="none";
     public static String title="none";
@@ -126,7 +125,7 @@ public class MainMenuActivity extends AppCompatActivity implements BillingProces
 
         // we will get the user billing status in local if it not present inn local then we will intialize the billing
 
-          purduct_purchase=sharedPreferences.getBoolean(Variables.ispuduct_puchase,false);
+         purduct_purchase=sharedPreferences.getBoolean(Variables.ispuduct_puchase,false);
 
         // check user if subscript or not both status we will save
             billingProcessor = new BillingProcessor(this, Variables.licencekey, this);
