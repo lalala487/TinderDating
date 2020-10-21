@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "644795758401",
+    "firebase_url": "https://tinder-a4807.firebaseio.com",
+    "project_id": "tinder-a4807",
+    "storage_bucket": "tinder-a4807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644795758401:android:c4552cf55b2fd3617d53c0",
+        "android_client_info": {
+          "package_name": "com.qboxus.pepinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644795758401-vnhjp1knvocrhdd9c0lv5qiu5gnnt70d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtXW5CLS6Rxcg6R9915-k-GFZJHJ9Op_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644795758401-vnhjp1knvocrhdd9c0lv5qiu5gnnt70d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

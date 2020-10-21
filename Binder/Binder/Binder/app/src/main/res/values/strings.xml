@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Binder</string>
+    <string name="app_name">PepsTinder</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
@@ -8,8 +8,8 @@
    
 
   
-    <string name="facebook_app_id">fb_app_id</string>
-    <string name="fb_login_protocol_scheme">fb(fb_app_id)</string>
+    <string name="facebook_app_id">801701427285971</string>
+    <string name="fb_login_protocol_scheme">801701427285971</string>
     
 
 
@@ -20,16 +20,16 @@
  
 
     <!--if you install the app form android studio-->
-     <string name="google_debug_key" translatable="false">google_debug_api_key</string>
+     <string name="google_debug_key" translatable="false">AIzaSyDEQO3JMXjNw2DRgh39XwtX-boggBWs5T0</string>
 
     <!--if you install the app form Play store-->
    <string name="google_release_key" translatable="false">google_release_api_key</string>
 
 
     <!--debug key if install from android studio or release key if install from playstore-->
-     <string name="Places_api" translatable="false">google_places_api_key</string>
+     <string name="Places_api" translatable="false">AIzaSyDEQO3JMXjNw2DRgh39XwtX-boggBWs5T0</string>
 
-   <string name="firebase_server_key" translatable="false">firebase_server_key_here</string>
+   <string name="firebase_server_key" translatable="false">AAAAliDSd0E:APA91bENS48TMZfAp-xIGUSNm9g5Tr5WllaF3LFO77BWUAf6zv-gdCEc0kSnCmmH_sGZQOilFxJ0MH7Ko_RW3FyR0cCcvtfYpIiprx9xGoISinpK8EE19nIBHjMAXl7F0nQ0IrKI5xM5</string>
     
 
 
