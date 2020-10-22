@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Amigos Con Derechos</string>
+
+    <string name="chat">Charla</string>
+    <string name="send_message_here">Enviar mensaje aquí ...</string>
+
+
+    <string name="enable_location">Habilitar ubicación</string>
+    <string name="you_ll_need_to_enable_your_location_n_in_order_to_use_binder">Deberá habilitar su ubicación \ n para poder usar esta aplicación</string>
+    <string name="allow_location">Permitir ubicación</string>
+
+
+    <string name="first_name">Nombre de pila</string>
+    <string name="last_name">Apellido</string>
+    <string name="date_of_birth">Fecha de nacimiento</string>
+    <string name="male">Masculino</string>
+    <string name="female">Hembra</string>
+    <string name="next">próximo</string>
+
+
+    <string name="unlimited_rewinds">Rebobinados ilimitados</string>
+    <string name="free_superlike_a_day">5 SuperLikes gratis al día</string>
+    <string name="unlimited_boost">Impulso ilimitado</string>
+    <string name="_19_99">$19.99</string>
+    <string name="per_month">Por mes</string>
+    <string name="_29_99">$29.99</string>
+    <string name="_3_months">3 meses</string>
+    <string name="_69_99">$69.99</string>
+    <string name="_1_year">1 año</string>
+    <string name="continue_txt">Seguir</string>
+    <string name="no_thanks">No, gracias</string>
+    <string name="subscription_txt">Al tocar "Continuar", su pago se cargará a su Google Play
+        cuenta, y su suscripción se renovará automáticamente por la misma
+        longitud del paquete al mismo precio hasta que lo cancele en la configuración en el
+        Tienda Google Play al menos 24 horas antes del final del período actual.
+        Al tocar "Continuar", acepta nuestra Política y Términos de Privacidad.</string>
+    <string name="recuring_billing_cancel_anytime">Facturación recurrente, cancelar en cualquier momento.</string>
+
+
+
+    <string name="login_description_1">Descubre gente nueva e interesante \ n cerca</string>
+    <string name="login_description_2">Desliza el dedo hacia la derecha para indicar que te gusta \ n o desliza el dedo hacia la izquierda para pasar</string>
+    <string name="login_description_3">Si también deslizan el dedo hacia la derecha, ¡es una coincidencia!</string>
+    <string name="continue_with_facebook">Continuar con facebook</string>
+    <string name="continue_with_google">Continuar con Google</string>
+    <string name="continue_with_phone">Continuar con el teléfono</string>
+    <string name="we_don_t_post_anything_to_facebook">No publicamos nada en Facebook.</string>
+
+
+
+    <string name="phone_number">Número de teléfono</string>
+    <string name="usa">Estados Unidos</string>
+    <string name="your_phone_number">su número de teléfono</string>
+    <string name="_1">+1</string>
+    <string name="location">Ubicación</string>
+    <string name="save_location">Guardar dirección</string>
+    <string name="verify_phone">Verificar teléfono</string>
+    <string name="confirm">Confirmar</string>
+    <string name="we_send_you_a_code_to_verify_your_phone_number">Te enviamos un código para verificar tu número de teléfono</string>
+    <string name="send_to">Enviar a ()</string>
+
+
+
+    <string name="introducting_binder_boost">Presentamos Boost</string>
+    <string name="skip_the_line">Saltarse la línea</string>
+    <string name="be_the_top_profile_in_your_area_for_30_minutes_and_get_more_watchs">Sea el perfil principal en su área durante 30 minutos y obtenga más relojes</string>
+    <string name="boost_me">Impulsame</string>
+    <string name="_08_85_remaining">08:85 Restante</string>
+    <string name="you_re_being_seen_by_more_people_keep_swiping_for_the_best_results">Estás siendo visto por más personas. ¡Sigue deslizando el dedo para obtener los mejores resultados!</string>
+    <string name="okey">BUENO</string>
+
+
+
+    <string name="edit_profile">Editar perfil</string>
+    <string name="done">hecho</string>
+    <string name="about_profile_name">Acerca del nombre del perfil</string>
+    <string name="about">Acerca de</string>
+    <string name="job_title">Título profesional</string>
+    <string name="company">Empresa</string>
+    <string name="school_college">Colegio</string>
+    <string name="gender">Género</string>
+
+    <string name="new_matches">Nuevos partidos</string>
+    <string name="_0_likes">0 me gusta</string>
+    <string name="no_other_match_found_yet">Aún no se ha encontrado ninguna otra coincidencia.</string>
+    <string name="message">Mensaje</string>
+
+    <string name="it_s_match">¡Es partido!</string>
+    <string name="you_and_alison_likes_each_other">tú y alison se caen bien</string>
+    <string name="send_a_message">Enviar un mensaje</string>
+
+    <string name="profile_name">Nombre de perfil</string>
+    <string name="settings">Configuraciones</string>
+
+
+
+    <string name="swiping_in">Deslizando hacia adentro</string>
+    <string name="my_current_location">Mi ubicación actual</string>
+    <string name="add_new_location">Agregar nueva ubicación</string>
+    <string name="show_me">Muéstrame</string>
+    <string name="men">Hombres</string>
+    <string name="women">Mujer</string>
+    <string name="maximum_distance">Distancia máxima</string>
+    <string name="mile">milla</string>
+    <string name="miles">millas</string>
+    <string name="age_range">Rango de edad</string>
+    <string name="year">Año</string>
+    <string name="years">Años</string>
+    <string name="show_me_on_binder">Muéstrame en la aplicación</string>
+    <string name="don_t_show_my_age">No muestres mi edad</string>
+    <string name="make_my_distance_invisible">Haz mi distancia invisible</string>
+    <string name="legal">Legal</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="delete_account">Borrar cuenta</string>
+
+
+    <string name="cancel">Cancelar</string>
+    <string name="update">Actualizar</string>
+
+
+    <string name="username">Nombre de usuario</string>
+    <string name="your_message">Tu mensaje</string>
+
+
+    <string name="report">Reporte</string>
+
+    <string name="get_the_rewind">Obtener el rebobinado</string>
+    <string name="are_you_sure">¿Estás seguro?</string>
+
+    <string name="delete_account_description">Eliminar una cuenta borrará todos sus datos por completo</string>
+    <string name="yes">si</string>
+    <string name="no">No</string>
+
+
+    <string name="are_you_sure_report_user">¿Estás seguro de informar a este usuario?</string>
+    <string name="delete_this_message">Borrar este mensaje</string>
+    <string name="unmatch_this_user">Eliminar este usuario</string>
+    <string name="unblock_this_user">Desbloquear este usuario</string>
+    <string name="block_this_user">Bloquee este usuario</string>
+
+
+    <string name="likes_limit">Su límite de Me gusta excedido</string>
+    <string name="superlikes_limit">Su límite de SuperLikes superó</string>
+
+    <string name="calling">Vocación...</string>
+    <string name="reconnecting_to">Reconectando a</string>
+    <string name="reconnecting">Reconectando</string>
+    <string name="connected_to">Conectado a</string>
+    <string name="connected">Conectado</string>
+    <string name="failed_to_connect">No se pudo conectar</string>
+    <string name="disconnected">Desconectado</string>
+    <string name="disconnected_from">Desconectado de</string>
+    <string name="audio_connected">Audio conectado</string>
+    <string name="audio_unpublished">Audio no publicado</string>
+    <string name="video_connected">Video conectado</string>
+    <string name="video_unpublished">Video no publicado</string>
+    <string name="audio_subscribed">Audio suscrito</string>
+    <string name="audio_unsubscribed">Audio cancelado</string>
+    <string name="audio_subscription_failed">Suscripción de audio fallida</string>
+    <string name="video_subscribed">Video suscrito</string>
+    <string name="video_unsubscribed">Video cancelado</string>
+    <string name="video_subscription_failed">Suscripción de video fallida</string>
+    <string name="joined">"unido"</string>
+    <string name="ringing">El sonar...</string>
+    <string name="alert">Alerta</string>
+    <string name="voice_reah_limit">Has superado el límite de llamadas de voz.</string>
+    <string name="video_reach_limit">Has superado el límite de videollamadas.</string>
+
+
+    <string name="no_internet">Sin internet. Conéctese a wifi o red celular.</string>
+    <string name="discovery_settings">Configuración de descubrimiento</string>
+    <string name="language">Idioma</string>
+    <string name="upgrade_to_gold_to_see_people_n_who_already_likes_you">Actualiza a Gold para ver personas \ n a las que ya les gustas.</string>
+    <string name="no_other_users_like_your_profile_so_far_subscribe_us_and_boost_your_profile_so_more_user_can_see_you">A ningún otro usuario le gusta tu perfil hasta ahora. Suscríbete y mejora tu perfil para que más usuarios puedan verte.</string>
+    <string name="see_who_likes_you">Ver a quien le gustas</string>
+
+
+</resources>

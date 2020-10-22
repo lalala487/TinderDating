@@ -40,16 +40,19 @@
 
     <string-array name="language_names_for_show">
         <item>English</item>
+        <item>Spanish</item>
         <item>العربية</item>
     </string-array>
 
     <string-array name="language_names_for_api">
         <item>english</item>
+        <item>spanish</item>
         <item>arabic</item>
     </string-array>
 
     <string-array name="language_code">
         <item>en</item>
+        <item>es</item>
         <item>ar</item>
     </string-array>
 
@@ -57,7 +60,7 @@
 
     <string name="arabic" translatable="false">العربية</string>
     <string name="english" translatable="false">English</string>
-
+    <string name="spanish" translatable="false">Spanish</string>
 
     <string name="chat">Chat</string>
     <string name="send_message_here">Send Message Here...</string>
@@ -119,7 +122,7 @@
 
 
 
-    <string name="introducting_binder_boost">Introducting Binder Boost</string>
+    <string name="introducting_binder_boost">Introducting Boost</string>
     <string name="skip_the_line">Skip the Line</string>
     <string name="be_the_top_profile_in_your_area_for_30_minutes_and_get_more_watchs">Be the top profile in your area for 30 minutes and get more watchs</string>
     <string name="boost_me">Boost Me</string>
@@ -163,7 +166,7 @@
     <string name="age_range">Age Range</string>
     <string name="year">Year</string>
     <string name="years">Years</string>
-    <string name="show_me_on_binder">Show me On Binder</string>
+    <string name="show_me_on_binder">Show me On the App</string>
     <string name="don_t_show_my_age">Don\'t show my Age</string>
     <string name="make_my_distance_invisible">Make my Distance Invisible</string>
     <string name="legal">Legal</string>
