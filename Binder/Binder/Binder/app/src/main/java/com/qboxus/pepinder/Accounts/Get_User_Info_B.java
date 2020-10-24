@@ -127,6 +127,7 @@ public class Get_User_Info_B  extends AppCompatActivity {
 
     private void get_user_info_describe()
     {
+
         Intent intent=new Intent(Get_User_Info_B.this, Get_User_Info_C.class);
         intent.putExtra("id",user_id);
         startActivity(intent);

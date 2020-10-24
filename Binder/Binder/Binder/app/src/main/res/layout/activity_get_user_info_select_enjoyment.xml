@@ -41,11 +41,34 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/listBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_pink_background"
+                    android:text="@string/continue_txt" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_above="@id/listBottom"
                 android:weightSum="4">
 
                 <LinearLayout
@@ -93,28 +116,11 @@
                         android:orientation="horizontal">
 
                         <ListView
+                            android:id="@+id/listCheck"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/btnBoth"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:background="@drawable/ic_pink_background"
-                            android:text="@string/continue_txt" />
-                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>

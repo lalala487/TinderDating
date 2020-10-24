@@ -66,7 +66,7 @@
                         android:text="@string/describe_interest"
                         android:textAlignment="viewStart"
                         android:textColor="@color/black"
-                        android:textSize="24sp" />
+                        android:textSize="14sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -83,10 +83,14 @@
                             android:id="@+id/editText4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:layout_weight="2"
                             android:ems="10"
-                            android:inputType="textPersonName"
-                            android:text="Name" />
+                            android:maxLines="5"
+                            style="@style/Widget.AppCompat.EditText"
+                            android:inputType="textMultiLine"
+                            android:minHeight="100dp"
+                            android:hint="someText"
+                            android:textColor="@color/black" />
 
                     </LinearLayout>
 
@@ -98,10 +102,10 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="30dp"
                         android:gravity="center"
-                        android:text="@string/describe_interest"
+                        android:text="@string/describe_you_looking"
                         android:textAlignment="viewStart"
                         android:textColor="@color/black"
-                        android:textSize="24sp" />
+                        android:textSize="14sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -119,8 +123,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:inputType="textPersonName"
-                            android:text="Name" />
+                            android:inputType="textMultiLine"
+                            android:maxLines="5"
+                            android:minHeight="100dp"
+                            style="@style/Widget.AppCompat.EditText"
+                            android:textColor="@color/black" />
                     </LinearLayout>
 
                 </LinearLayout>

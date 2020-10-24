@@ -249,6 +249,8 @@
     <string name="describe_interest"> Describe yourself as you are , so someone will be interested in you</string>
     <string name="describe_you_looking"> Describe what you are looking for?</string>
     <string name="describe_what_are_your_enjoyment"> What are your enjoyments</string>
+    <string name="tell_me_yourself"> Tell me about yourself</string>
+    <string name="for_an_eye_catching"> For an eye-catching first impressions</string>
     <string name="describe_choose_atleast_"> Choose atleast one tag that will help define what you are enjoy in a relationship.</string>
 </resources>
 
