@@ -608,7 +608,9 @@ public class Users_F extends RootFragment implements View.OnClickListener {
         switch (id){
             case R.id.cross_btn:
                 Clearbackstack();
+
                 swipeLeft();
+
                 break;
 
             case R.id.heart_btn:
@@ -902,7 +904,12 @@ public class Users_F extends RootFragment implements View.OnClickListener {
         item.setSchool(userdata.optString("school"));
         item.setBirthday(userdata.optString("birthday"));
         item.setAbout(userdata.optString("about_me"));
-        item.setLocation(userdata.optString("distance"));
+        //item.setLocation(userdata.optString("distance"));
+        String dist = userdata.optString("distance");
+        dist = dist.substring(0,dist.length()-11);
+        dist = dist +  context.getResources().getString(R.string.km_away);
+        item.setLocation(dist);
+
         item.setGender(""+userdata.optString("gender"));
         item.setSwipe(""+userdata.optString("swipe"));
 

@@ -95,7 +95,7 @@
 
 
 
-        <activity android:name="com.qboxus.binder.Accounts.Get_User_Info_A"
+        <activity android:name="com.qboxus.pepinder.Accounts.Get_User_Info_A"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>

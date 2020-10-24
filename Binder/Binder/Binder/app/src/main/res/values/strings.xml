@@ -146,7 +146,8 @@
     <string name="message">Message</string>
 
     <string name="it_s_match">it\'s Match!</string>
-    <string name="you_and_alison_likes_each_other">you and alison likes each other</string>
+    <string name="you_and_">you and </string>
+    <string name="likes_eachother"> likes each other</string>
     <string name="send_a_message">Send a Message</string>
 
     <string name="profile_name">Profile Name</string>
@@ -161,8 +162,8 @@
     <string name="men">Men</string>
     <string name="women">Women</string>
     <string name="maximum_distance">Maximum Distance</string>
-    <string name="mile">mile</string>
-    <string name="miles">miles</string>
+    <string name="mile">KM</string>
+    <string name="miles">KM</string>
     <string name="age_range">Age Range</string>
     <string name="year">Year</string>
     <string name="years">Years</string>
@@ -236,7 +237,19 @@
     <string name="no_other_users_like_your_profile_so_far_subscribe_us_and_boost_your_profile_so_more_user_can_see_you">No other users like your profile so far. Subscribe us and boost your profile so more user can see you.</string>
     <string name="see_who_likes_you">See who likes you</string>
 
+    <string name="toast_select_image">Select Image</string>
+    <string name="toast_plz_enter_your_first_name">Please enter your First Name</string>
+    <string name="toast_plz_enter_your_last_name">Please enter your Last Name </string>
+    <string name="toast_plz_enter_your_date_of_birth">Please enter your Date of Birth</string>
 
+    <string name="km_away">  KM away</string>
+
+    <string name="interested_meeting_in"> Interested meeting in</string>
+    <string name="both"> Both </string>
+    <string name="describe_interest"> Describe yourself as you are , so someone will be interested in you</string>
+    <string name="describe_you_looking"> Describe what you are looking for?</string>
+    <string name="describe_what_are_your_enjoyment"> What are your enjoyments</string>
+    <string name="describe_choose_atleast_"> Choose atleast one tag that will help define what you are enjoy in a relationship.</string>
 </resources>
 
 

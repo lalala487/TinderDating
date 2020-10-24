@@ -1,4 +1,4 @@
-package com.qboxus.binder.Accounts;
+package com.qboxus.pepinder.Accounts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -27,6 +27,7 @@ import com.qboxus.binder.CodeClasses.Variables;
 import com.qboxus.binder.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.qboxus.pepinder.Accounts.Get_User_Info_B;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 import org.json.JSONArray;
@@ -108,22 +109,22 @@ public class Get_User_Info_A extends AppCompatActivity {
                 String f_name= first_name.getText().toString();
                 String l_name=last_name.getText().toString();
                 String date_of_birth=dateofbrith_edit.getText().toString();
-
+                Context context = Get_User_Info_A.this;
                 if(image_bas64==null){
-                    Toast.makeText(Get_User_Info_A.this, "Select Image", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Get_User_Info_A.this, context.getResources().getString(R.string.toast_select_image), Toast.LENGTH_SHORT).show();
                 }
                 else if(TextUtils.isEmpty(f_name)){
 
-                    Toast.makeText(Get_User_Info_A.this, "Please enter your First Name", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Get_User_Info_A.this, context.getResources().getString(R.string.toast_plz_enter_your_first_name), Toast.LENGTH_SHORT).show();
 
                 } else if(TextUtils.isEmpty(l_name)){
 
-                    Toast.makeText(Get_User_Info_A.this, "Please enter your Last Name", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Get_User_Info_A.this, context.getResources().getString(R.string.toast_plz_enter_your_last_name), Toast.LENGTH_SHORT).show();
 
                 }
                 else if(TextUtils.isEmpty(date_of_birth)){
 
-                    Toast.makeText(Get_User_Info_A.this, "Please enter your Date of Birth", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Get_User_Info_A.this,context.getResources().getString(R.string.toast_plz_enter_your_date_of_birth), Toast.LENGTH_SHORT).show();
                 }
                 else {
 
@@ -309,7 +310,8 @@ public class Get_User_Info_A extends AppCompatActivity {
                 editor.commit();
 
                 // after all things done we will move the user to enable location screen
-                enable_location();
+                get_user_info_interest();
+                //enable_location();
             }else {
                 Toast.makeText(this, ""+jsonObject.optString("msg"), Toast.LENGTH_SHORT).show();
             }
@@ -322,6 +324,15 @@ public class Get_User_Info_A extends AppCompatActivity {
     }
 
 
+    private void get_user_info_interest()
+    {
+        Intent intent=new Intent(Get_User_Info_A.this, Get_User_Info_B.class);
+        intent.putExtra("id",user_id);
+        startActivity(intent);
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+        finishAffinity();
+    }
+    /*
     private void enable_location() {
 
         // will move the user for enable location screen
@@ -330,6 +341,7 @@ public class Get_User_Info_A extends AppCompatActivity {
         finishAffinity();
 
     }
+     */
 
 
     public void Goback(View view) {

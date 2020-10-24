@@ -87,7 +87,8 @@
     <string name="message">رسالة</string>
 
     <string name="it_s_match">انها مباراة!</string>
-    <string name="you_and_alison_likes_each_other">أنت وأليسون يحبان بعضهما البعض</string>
+    <string name="you_and_">you and </string>
+    <string name="likes_eachother"> likes each other</string>
     <string name="send_a_message">ارسل رسالة</string>
 
     <string name="profile_name">اسم الشخصية</string>
@@ -176,5 +177,18 @@
     <string name="no_other_users_like_your_profile_so_far_subscribe_us_and_boost_your_profile_so_more_user_can_see_you">لا يوجد مستخدمون آخرون يحبون ملفك الشخصي حتى الآن. اشترك معنا وقم بتعزيز ملفك الشخصي حتى يتمكن المزيد من المستخدمين من رؤيتك.</string>
     <string name="see_who_likes_you">انظر من يحبك</string>
 
+    <string name="toast_select_image">Select Image</string>
+    <string name="toast_plz_enter_your_first_name">Please enter your First Name</string>
+    <string name="toast_plz_enter_your_last_name">Please enter your Last Name </string>
+    <string name="toast_plz_enter_your_date_of_birth">Please enter your Date of Birth</string>
+    <string name="km_away"> KM away</string>
+
+    <string name="interested_meeting_in"> Interested meeting in</string>
+    <string name="both"> Both </string>
+    <string name="describe_interest"> Describe yourself as you are , so someone will be interested in you</string>
+    <string name="describe_you_looking"> Describe what you are looking for?</string>
+
+    <string name="describe_what_are_your_enjoyment"> What are your enjoyments</string>
+    <string name="describe_choose_atleast_"> Choose atleast one tag that will help define what you are enjoy in a relationship.</string>
 
 </resources>

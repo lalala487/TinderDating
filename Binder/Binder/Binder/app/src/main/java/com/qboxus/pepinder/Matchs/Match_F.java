@@ -91,7 +91,10 @@ public class Match_F extends RootFragment {
 
             SendPushNotification(item.getU_id());
 
-            match_txt.setText(" You and "+item.getUsername()+" Like each other");
+            String message = context.getResources().getString(R.string.you_and_);
+            message = message + item.getUsername();
+            message = message + context.getResources().getString(R.string.likes_eachother);
+            match_txt.setText(message);
 
             if(MainMenuActivity.user_pic!=null && !MainMenuActivity.user_pic.equals("")){
                 Uri uri;

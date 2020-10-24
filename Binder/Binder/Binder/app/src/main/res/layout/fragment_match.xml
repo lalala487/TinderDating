@@ -59,7 +59,7 @@
                             android:id="@+id/match_txt"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/dimgray"
-                            android:text="@string/you_and_alison_likes_each_other"/>
+                            android:text="@string/you_and_"/>
 
 
                         <RelativeLayout
