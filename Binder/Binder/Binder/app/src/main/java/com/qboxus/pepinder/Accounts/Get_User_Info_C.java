@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,7 @@ public class Get_User_Info_C  extends AppCompatActivity {
 
     String user_id;
 
+    EditText describeAbout,describeLookingfor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +38,26 @@ public class Get_User_Info_C  extends AppCompatActivity {
 
         continueBtn=findViewById(R.id.btnContinue);
 
+        describeAbout=findViewById(R.id.first_name);
+        describeLookingfor=findViewById(R.id.last_name);
+
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String about= describeAbout.getText().toString();
+                String lookingfor=describeLookingfor.getText().toString();
+                Context context = Get_User_Info_C.this;
+                if(TextUtils.isEmpty(about)){
+
+                    Toast.makeText(Get_User_Info_C.this, context.getResources().getString(R.string.toast_plz_write_describe), Toast.LENGTH_SHORT).show();
+
+                } else if(TextUtils.isEmpty(lookingfor)){
+
+                    Toast.makeText(Get_User_Info_C.this, context.getResources().getString(R.string.toast_plz_write_looking_for), Toast.LENGTH_SHORT).show();
+
+                }
                 Call_Api(user_id,
-                        0);
+                        about,lookingfor);
             }
         });
 
@@ -47,33 +65,33 @@ public class Get_User_Info_C  extends AppCompatActivity {
 
     // this method will store the info of user to  database
     private void Call_Api(String user_id,
-                                     int selectedCategory
+                                     String about,String lookingfor
     ) {
 
 
         JSONObject parameters = new JSONObject();
         try {
             parameters.put("fb_id", user_id);
-            parameters.put("selected_interest",selectedCategory);
+            parameters.put("about",about);
+            parameters.put("lookingfor",lookingfor);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         com.qboxus.binder.CodeClasses.Functions.generateNoteOnSD("parameters",parameters.toString());
-        get_user_info_lookingfor();
-        /*com.qboxus.binder.CodeClasses.ApiRequest.Call_Api(this, com.qboxus.binder.CodeClasses.Variables.SignUp, parameters, new com.qboxus.binder.CodeClasses.Callback() {
+        com.qboxus.binder.CodeClasses.ApiRequest.Call_Api(this, com.qboxus.binder.CodeClasses.Variables.SignUpDescribe, parameters, new com.qboxus.binder.CodeClasses.Callback() {
             @Override
             public void Responce(String resp) {
                 com.qboxus.binder.CodeClasses.Functions.cancel_loader();
-                Parse_signup_data(resp);
+                Parse_data(resp);
             }
         });
-        */
+
     }
 
-    /*
+
     // if the signup successfull then this method will call and it store the user info in local
-    public void Parse_signup_data(String loginData){
+    public void Parse_data(String loginData){
         try {
             JSONObject jsonObject=new JSONObject(loginData);
             String code=jsonObject.optString("code");
@@ -81,18 +99,10 @@ public class Get_User_Info_C  extends AppCompatActivity {
                 JSONArray jsonArray=jsonObject.getJSONArray("msg");
                 JSONObject userdata = jsonArray.getJSONObject(0);
                 SharedPreferences.Editor editor=sharedPreferences.edit();
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.uid,userdata.optString("fb_id"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.f_name,userdata.optString("first_name"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.l_name,userdata.optString("last_name"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.birth_day,userdata.optString("age"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.gender,userdata.optString("gender"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.u_pic,userdata.optString("image1"));
-                editor.putBoolean(com.qboxus.binder.CodeClasses.Variables.islogin,true);
                 editor.commit();
 
-                // after all things done we will move the user to enable location screen
-                get_user_info_interest();
-                //enable_location();
+                // after all things done we will move go to category screen
+                get_user_info_category();
             }else {
                 Toast.makeText(this, ""+jsonObject.optString("msg"), Toast.LENGTH_SHORT).show();
             }
@@ -104,9 +114,8 @@ public class Get_User_Info_C  extends AppCompatActivity {
 
     }
 
-     */
 
-    private void get_user_info_lookingfor()
+    private void get_user_info_category()
     {
         Intent intent=new Intent(Get_User_Info_C.this, Get_User_Info_D.class);
         intent.putExtra("id",user_id);

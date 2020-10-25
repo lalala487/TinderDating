@@ -131,6 +131,12 @@ public class Variables {
 
     public final static String SignUp=domain+"signup";
 
+    public final static String SignUpInterest=domain+"signupInterest";
+
+    public final static String SignUpDescribe=domain+"signupDescribe";
+
+    public final static String SignUpCheck=domain+"signupCheck";
+
     public final static String Edit_profile=domain+"edit_profile";
 
     public final static String getUserInfo=domain+"getUserInfo";

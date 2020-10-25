@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Binder.iml" filepath="$PROJECT_DIR$/Binder.iml" group="Binder" />
-      <module fileurl="file://$PROJECT_DIR$/Binder-Binder.iml" filepath="$PROJECT_DIR$/Binder-Binder.iml" group="Binder" />
-      <module fileurl="file://$PROJECT_DIR$/app/Binder-app.iml" filepath="$PROJECT_DIR$/app/Binder-app.iml" group="Binder/app" />
       <module fileurl="file://$PROJECT_DIR$/DragRecylerView/DragRecylerView.iml" filepath="$PROJECT_DIR$/DragRecylerView/DragRecylerView.iml" group="Binder/DragRecylerView" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Binder/app" />
     </modules>

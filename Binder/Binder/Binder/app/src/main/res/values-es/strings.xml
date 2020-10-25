@@ -182,6 +182,10 @@
     <string name="toast_plz_enter_your_first_name">Por favor, introduzca su nombre</string>
     <string name="toast_plz_enter_your_last_name">Por favor ingrese su apellido</string>
     <string name="toast_plz_enter_your_date_of_birth">Por favor, introduzca su fecha de nacimiento</string>
+    <string name="toast_plz_select_enjoyment">Please select at least one enjoyment.</string>
+
+    <string name="toast_plz_write_describe">Please write about you.</string>
+    <string name="toast_plz_write_looking_for">Please write what you are looing for.</string>
 
     <string name="km_away">  KM de distanicia</string>
 

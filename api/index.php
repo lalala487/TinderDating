@@ -9,6 +9,21 @@
 			signup();
 		}
 		else
+		if($_GET["p"]=="signupInterest")
+		{
+			signupInterest();
+		}
+		else
+		if($_GET["p"]=="signupDescribe")
+		{
+			signupDescribe();
+		}
+		else
+		if($_GET["p"]=="signupCheck")
+		{
+			signupCheck();
+		}
+		else
 		if($_GET["p"]=="edit_profile")
 		{
 			edit_profile();
@@ -377,6 +392,146 @@
 		}
 	}
 	
+	function signupDescribe()
+	{
+		require_once("config.php");
+	    $input = @file_get_contents("php://input");
+	    $event_json = json_decode($input,true);
+		
+		if(isset($event_json['fb_id']) && isset($event_json['about']) && isset($event_json['lookingfor']))
+		{
+			$fb_id=htmlspecialchars(strip_tags($event_json['fb_id'] , ENT_QUOTES));
+			$about=htmlspecialchars(strip_tags($event_json['about'] , ENT_QUOTES));
+			$lookingfor=htmlspecialchars(strip_tags($event_json['lookingfor'] , ENT_QUOTES));
+		   
+			$log_in="select * from users where fb_id='".$fb_id."' ";
+			$log_in_rs=mysqli_query($conn,$log_in);
+			
+			if(mysqli_num_rows($log_in_rs))
+			{   
+		
+				//update 
+				$qrry_1="update users SET about_me ='".$about."' , job_title ='".$lookingfor."' WHERE fb_id ='".$fb_id."' ";
+				if(mysqli_query($conn,$qrry_1))
+				{
+					$array_out = array();
+    					
+            		 $array_out[] = 
+            			array(
+            			
+            			);
+            		$output=array( "code" => "200", "msg" => $array_out);
+            		print_r(json_encode($output, true));
+				}
+				else
+				{
+					$array_out = array();
+					
+					$array_out[] = 
+						array(
+						"response" =>"Problem in Updating");
+					
+					$output=array( "code" => "203", "msg" => $array_out);
+					print_r(json_encode($output, true));
+				}
+			}	
+			else
+			{
+			    $array_out = array();
+					
+				$array_out[] = 
+					array(
+					"response" =>"User not Exists Why?");
+				
+				$output=array( "code" => "202", "msg" => $array_out);
+				print_r(json_encode($output, true));
+			}
+			
+			
+			
+		}
+		else
+		{
+			$array_out = array();
+					
+			 $array_out[] = 
+				array(
+				"response" =>"Json Parem are missing");
+			
+			$output=array( "code" => "201", "msg" => $array_out);
+			print_r(json_encode($output, true));
+		}
+	}
+	
+	function signupCheck()
+	{
+		require_once("config.php");
+	    $input = @file_get_contents("php://input");
+	    $event_json = json_decode($input,true);
+		
+		if(isset($event_json['fb_id']) && isset($event_json['about']) && isset($event_json['lookingfor']))
+		{
+			$fb_id=htmlspecialchars(strip_tags($event_json['fb_id'] , ENT_QUOTES));
+			$selected_category=htmlspecialchars(strip_tags($event_json['selected_category'] , ENT_QUOTES));
+		   
+			$log_in="select * from users where fb_id='".$fb_id."' ";
+			$log_in_rs=mysqli_query($conn,$log_in);
+			
+			if(mysqli_num_rows($log_in_rs))
+			{   
+		
+				//update 
+				$qrry_1="update users SET company ='".$selected_category."' WHERE fb_id ='".$fb_id."' ";
+				if(mysqli_query($conn,$qrry_1))
+				{
+					$array_out = array();
+    					
+            		 $array_out[] = 
+            			array(
+            			
+            			);
+            		$output=array( "code" => "200", "msg" => $array_out);
+            		print_r(json_encode($output, true));
+				}
+				else
+				{
+					$array_out = array();
+					
+					$array_out[] = 
+						array(
+						"response" =>"Problem in Updating");
+					
+					$output=array( "code" => "203", "msg" => $array_out);
+					print_r(json_encode($output, true));
+				}
+			}	
+			else
+			{
+			    $array_out = array();
+					
+				$array_out[] = 
+					array(
+					"response" =>"User not Exists Why?");
+				
+				$output=array( "code" => "202", "msg" => $array_out);
+				print_r(json_encode($output, true));
+			}
+			
+			
+			
+		}
+		else
+		{
+			$array_out = array();
+					
+			 $array_out[] = 
+				array(
+				"response" =>"Json Parem are missing");
+			
+			$output=array( "code" => "201", "msg" => $array_out);
+			print_r(json_encode($output, true));
+		}
+	}
 	
 	function flat_user()
 	{

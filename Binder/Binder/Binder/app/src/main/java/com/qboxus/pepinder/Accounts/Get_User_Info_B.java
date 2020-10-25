@@ -39,7 +39,7 @@ public class Get_User_Info_B  extends AppCompatActivity {
         manBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call_Api_For_Signup(user_id,
+                Call_Api(user_id,
                         0);
             }
         });
@@ -48,7 +48,7 @@ public class Get_User_Info_B  extends AppCompatActivity {
         womanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call_Api_For_Signup(user_id,
+                Call_Api(user_id,
                         1);
             }
         });
@@ -57,7 +57,8 @@ public class Get_User_Info_B  extends AppCompatActivity {
         bothBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call_Api_For_Signup(user_id,
+
+                Call_Api(user_id,
                         2);
             }
         });
@@ -65,11 +66,18 @@ public class Get_User_Info_B  extends AppCompatActivity {
     }
 
     // this method will store the info of user to  database
-    private void Call_Api_For_Signup(String user_id,
+    private void Call_Api(String user_id,
                                      int selectedCategory
                                      ) {
+        if (selectedCategory == 0)
+            com.qboxus.binder.Main_Menu.MainMenuActivity.sharedPreferences.edit().putString(com.qboxus.binder.CodeClasses.Variables.show_me,"male").commit();
+        if (selectedCategory == 1)
+            com.qboxus.binder.Main_Menu.MainMenuActivity.sharedPreferences.edit().putString(com.qboxus.binder.CodeClasses.Variables.show_me,"female").commit();
+        if (selectedCategory == 2)
+            com.qboxus.binder.Main_Menu.MainMenuActivity.sharedPreferences.edit().putString(com.qboxus.binder.CodeClasses.Variables.show_me,"all").commit();
 
-
+        get_user_info_describe();
+        /*
         JSONObject parameters = new JSONObject();
         try {
             parameters.put("fb_id", user_id);
@@ -79,38 +87,30 @@ public class Get_User_Info_B  extends AppCompatActivity {
         }
 
         com.qboxus.binder.CodeClasses.Functions.generateNoteOnSD("parameters",parameters.toString());
-        get_user_info_describe();
-        /*com.qboxus.binder.CodeClasses.ApiRequest.Call_Api(this, com.qboxus.binder.CodeClasses.Variables.SignUp, parameters, new com.qboxus.binder.CodeClasses.Callback() {
+
+        com.qboxus.binder.CodeClasses.ApiRequest.Call_Api(this, com.qboxus.binder.CodeClasses.Variables.SignUpInterest, parameters, new com.qboxus.binder.CodeClasses.Callback() {
             @Override
             public void Responce(String resp) {
                 com.qboxus.binder.CodeClasses.Functions.cancel_loader();
-                Parse_signup_data(resp);
+                Parse_return_data(resp);
             }
         });
         */
     }
 
-    /*
+
     // if the signup successfull then this method will call and it store the user info in local
-    public void Parse_signup_data(String loginData){
+    public void Parse_return_data(String returnData){
         try {
-            JSONObject jsonObject=new JSONObject(loginData);
+            JSONObject jsonObject=new JSONObject(returnData);
             String code=jsonObject.optString("code");
             if(code.equals("200")){
                 JSONArray jsonArray=jsonObject.getJSONArray("msg");
                 JSONObject userdata = jsonArray.getJSONObject(0);
                 SharedPreferences.Editor editor=sharedPreferences.edit();
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.uid,userdata.optString("fb_id"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.f_name,userdata.optString("first_name"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.l_name,userdata.optString("last_name"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.birth_day,userdata.optString("age"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.gender,userdata.optString("gender"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.u_pic,userdata.optString("image1"));
-                editor.putBoolean(com.qboxus.binder.CodeClasses.Variables.islogin,true);
                 editor.commit();
-
-                // after all things done we will move the user to enable location screen
-                get_user_info_interest();
+                // after all things done we will move another user asking screen
+                get_user_info_describe();
                 //enable_location();
             }else {
                 Toast.makeText(this, ""+jsonObject.optString("msg"), Toast.LENGTH_SHORT).show();
@@ -123,7 +123,7 @@ public class Get_User_Info_B  extends AppCompatActivity {
 
     }
 
-     */
+
 
     private void get_user_info_describe()
     {

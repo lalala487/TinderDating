@@ -84,12 +84,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:ems="10"
+                            android:ems="9"
                             android:maxLines="5"
                             style="@style/Widget.AppCompat.EditText"
                             android:inputType="textMultiLine"
                             android:minHeight="100dp"
-                            android:hint="someText"
+                            android:hint="@string/tell_me_yourself"
+                            android:textColorHint="@color/gray"
                             android:textColor="@color/black" />
 
                     </LinearLayout>
@@ -122,9 +123,11 @@
                             android:id="@+id/editText6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="10"
+                            android:ems="9"
                             android:inputType="textMultiLine"
                             android:maxLines="5"
+                            android:textColorHint="@color/gray"
+                            android:hint="@string/for_an_eye_catching"
                             android:minHeight="100dp"
                             style="@style/Widget.AppCompat.EditText"
                             android:textColor="@color/black" />

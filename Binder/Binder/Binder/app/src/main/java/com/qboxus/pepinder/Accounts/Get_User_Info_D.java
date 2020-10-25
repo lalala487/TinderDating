@@ -52,8 +52,18 @@ public class Get_User_Info_D  extends AppCompatActivity {
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call_Api(user_id,
-                        0);
+                // check or uncheck
+                boolean isChecked = false;
+                Context context = Get_User_Info_D.this;
+                for (int i =0; i< planets.length; i++)
+                {
+                    Planet one = planets[i];
+                    if (one.checked == true)
+                        isChecked = true;
+                }
+                if (isChecked == false)
+                    Toast.makeText(Get_User_Info_D.this,context.getResources().getString(R.string.toast_plz_select_enjoyment), Toast.LENGTH_SHORT).show();
+                Call_Api(user_id);
             }
         });
 
@@ -208,34 +218,43 @@ public class Get_User_Info_D  extends AppCompatActivity {
         }
     }
         // this method will store the info of user to  database
-    private void Call_Api(String user_id,
-                          int selectedCategory
+    private void Call_Api(String user_id
     ) {
 
 
         JSONObject parameters = new JSONObject();
         try {
             parameters.put("fb_id", user_id);
-            parameters.put("selected_interest",selectedCategory);
+
+            String selNameList = "";
+            for (int i =0; i< planets.length; i++)
+            {
+                Planet one = planets[i];
+                if (one.checked == true)
+                {
+                    selNameList =  selNameList + "," + one.getName();
+                }
+            }
+
+            parameters.put("selected_category",selNameList);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         com.qboxus.binder.CodeClasses.Functions.generateNoteOnSD("parameters",parameters.toString());
-        enable_location();
-        /*com.qboxus.binder.CodeClasses.ApiRequest.Call_Api(this, com.qboxus.binder.CodeClasses.Variables.SignUp, parameters, new com.qboxus.binder.CodeClasses.Callback() {
+        com.qboxus.binder.CodeClasses.ApiRequest.Call_Api(this, com.qboxus.binder.CodeClasses.Variables.SignUp, parameters, new com.qboxus.binder.CodeClasses.Callback() {
             @Override
             public void Responce(String resp) {
                 com.qboxus.binder.CodeClasses.Functions.cancel_loader();
-                Parse_signup_data(resp);
+                Parse_data(resp);
             }
         });
-        */
+
     }
 
-    /*
+
     // if the signup successfull then this method will call and it store the user info in local
-    public void Parse_signup_data(String loginData){
+    public void Parse_data(String loginData){
         try {
             JSONObject jsonObject=new JSONObject(loginData);
             String code=jsonObject.optString("code");
@@ -243,18 +262,10 @@ public class Get_User_Info_D  extends AppCompatActivity {
                 JSONArray jsonArray=jsonObject.getJSONArray("msg");
                 JSONObject userdata = jsonArray.getJSONObject(0);
                 SharedPreferences.Editor editor=sharedPreferences.edit();
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.uid,userdata.optString("fb_id"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.f_name,userdata.optString("first_name"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.l_name,userdata.optString("last_name"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.birth_day,userdata.optString("age"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.gender,userdata.optString("gender"));
-                editor.putString(com.qboxus.binder.CodeClasses.Variables.u_pic,userdata.optString("image1"));
-                editor.putBoolean(com.qboxus.binder.CodeClasses.Variables.islogin,true);
                 editor.commit();
 
                 // after all things done we will move the user to enable location screen
-                get_user_info_interest();
-                //enable_location();
+                enable_location();
             }else {
                 Toast.makeText(this, ""+jsonObject.optString("msg"), Toast.LENGTH_SHORT).show();
             }
@@ -266,7 +277,6 @@ public class Get_User_Info_D  extends AppCompatActivity {
 
     }
 
-     */
 
     private void enable_location() {
 

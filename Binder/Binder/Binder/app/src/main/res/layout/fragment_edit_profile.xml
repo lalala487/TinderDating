@@ -135,7 +135,7 @@
            <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="@string/job_title"
+               android:text="@string/describe_you_looking"
                android:textSize="18dp"
                android:padding="10dp"
                android:elevation="0.5dp"
@@ -147,7 +147,7 @@
            <EditText
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:hint="@string/job_title"
+               android:hint="@string/for_an_eye_catching"
                android:padding="15dp"
                android:textSize="15dp"
                android:singleLine="true"
@@ -169,7 +169,7 @@
            <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="@string/company"
+               android:text="@string/describe_what_are_your_enjoyment"
                android:textSize="18dp"
                android:padding="10dp"
                android:elevation="0.5dp"
@@ -181,7 +181,6 @@
            <EditText
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:hint="@string/company"
                android:padding="15dp"
                android:paddingStart="15dp"
                android:textSize="15dp"
@@ -309,7 +308,60 @@
 
        </LinearLayout>
 
+       <!--
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:paddingBottom="20dp">
 
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/interested_meeting_in"
+               android:textSize="18dp"
+               android:padding="10dp"
+               android:elevation="0.5dp"
+               android:textStyle="italic"
+               android:gravity="center_vertical|start"
+               android:background="@color/lightgraycolor"
+               android:textColor="@color/dimgray"/>
+
+
+           <RadioGroup
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginTop="10dp"
+               android:paddingStart="10dp">
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/male"
+                   android:textSize="15dp"
+                   android:id="@+id/btnMan"
+                   android:theme="@style/RadioButton"
+                   android:textColor="@color/black"/>
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/female"
+                   android:textSize="15dp"
+                   android:id="@+id/btnWomen"
+                   android:theme="@style/RadioButton"
+                   android:textColor="@color/black"/>
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/both"
+                   android:textSize="15dp"
+                   android:id="@+id/btnBoth"
+                   android:theme="@style/RadioButton"
+                   android:textColor="@color/black"/>
+           </RadioGroup>
+
+       </LinearLayout>
+        -->
    </LinearLayout>
 
 </ScrollView>
